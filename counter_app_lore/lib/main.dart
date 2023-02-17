@@ -1,22 +1,18 @@
+import 'package:counter_app_lore/screens/counter.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(CounterApp());
+}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CounterApp extends StatelessWidget {
+  const CounterApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: CounterScreen(),
     );
   }
 }
