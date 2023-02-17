@@ -5,9 +5,24 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    const fontSize30 = TextStyle(fontSize: 30);
+
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('HomeScreen'),
+          elevation: 0,
+        ),
         body: Center(
-      child: Text('HomeScreen'),
-    ));
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text(
+                'Numero click',
+                style: TextStyle(fontSize: 30),
+              ),
+              Text('10', style: TextStyle(fontSize: 30)),
+            ],
+          ),
+        ));
   }
 }
